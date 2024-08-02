@@ -19,15 +19,21 @@
 
   outputs =
     inputs:
-    inputs.snowfall-lib.mkFlake {
-      inherit inputs;
+    let
+      lib = inputs.snowfall-lib.mkLib {
+        inherit inputs;
 
-      src = ./.;
+        src = ./.;
+
+        snowfall = {
+          namespace = "caprinix";
+        };
+      };
+    in
+    lib.mkFlake {
 
       systems.modules.nixos = with inputs; [ home-manager.nixosModules.home-manager ];
 
-      snowfall = {
-        namespace = "caprinix";
-      };
+      outputs-builder = channels: { formatter = channels.nixpkgs.nixfmt-rfc-style; };
     };
 }
