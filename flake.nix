@@ -18,5 +18,9 @@
       inherit inputs;
 
       src = ./.;
+
+      snowfall = {
+        namespace = "caprinix";
+      };
     };
 }
