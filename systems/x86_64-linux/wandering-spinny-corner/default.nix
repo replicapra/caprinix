@@ -87,19 +87,6 @@
   #     tree
   #   ];
   # };
-  users.users.capra = {
-    isNormalUser = true;
-    initialPassword = "capra";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [
-      neovim
-      git
-
-    ];
-  };
   programs.firefox.enable = true;
   nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search, run:
