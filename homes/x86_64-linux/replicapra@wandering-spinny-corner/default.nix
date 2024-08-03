@@ -7,6 +7,7 @@ with lib.${namespace};
     programs = {
       git = enabled;
       zsh = enabled;
+      atuin = enabled;
     };
   };
 
