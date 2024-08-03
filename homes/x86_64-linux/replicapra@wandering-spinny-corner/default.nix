@@ -8,6 +8,7 @@ with lib.${namespace};
       git = enabled;
       zsh = enabled;
       atuin = enabled;
+      starship = enabled;
     };
   };
 
