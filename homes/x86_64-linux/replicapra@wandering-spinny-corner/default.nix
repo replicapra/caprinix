@@ -9,6 +9,7 @@ with lib.${namespace};
       zsh = enabled;
       atuin = enabled;
       starship = enabled;
+      tmux = enabled;
     };
   };
 
