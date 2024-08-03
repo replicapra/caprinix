@@ -6,6 +6,7 @@ with lib.${namespace};
   caprinix = {
     programs = {
       git = enabled;
+      zsh = enabled;
     };
   };
 
