@@ -5,6 +5,7 @@ with lib.${namespace};
 
   caprinix = {
     programs = {
+      core = enabled;
       git = enabled;
       zsh = enabled;
       atuin = enabled;
