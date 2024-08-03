@@ -11,7 +11,7 @@ let
   cfg = config.home-manager.users.replicapra.${namespace}.programs.zsh;
 in
 {
-  config = mkIf cfg.enable {
+  config = mkIfEnabled cfg {
     users.users.replicapra.shell = pkgs.zsh;
     programs.zsh = enabled;
   };

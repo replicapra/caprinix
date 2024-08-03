@@ -15,7 +15,7 @@ in
     enable = mkEnableOption "zsh";
   };
 
-  config = mkIf cfg.enable {
+  config = mkIfEnabled cfg {
     programs = {
       zsh = {
         enable = true;

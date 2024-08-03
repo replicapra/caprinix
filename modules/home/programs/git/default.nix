@@ -14,7 +14,7 @@ in
     enable = mkEnableOption "git";
   };
 
-  config = mkIf cfg.enable {
+  config = mkIfEnabled cfg {
     programs = {
       git = enabled // {
         userEmail = "replicapra@outlook.com";
