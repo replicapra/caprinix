@@ -10,6 +10,7 @@ with lib.${namespace};
       atuin = enabled;
       starship = enabled;
       tmux = enabled;
+      neovim = enabled;
     };
   };
 
