@@ -37,7 +37,10 @@
     in
     lib.mkFlake {
 
-      systems.modules.nixos = with inputs; [ home-manager.nixosModules.home-manager ];
+      systems.modules.nixos = with inputs; [
+        home-manager.nixosModules.home-manager
+        disko.nixosModules.disko
+      ];
 
       outputs-builder = channels: { formatter = channels.nixpkgs.nixfmt-rfc-style; };
     };
