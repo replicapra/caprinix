@@ -19,6 +19,9 @@ with lib.${namespace};
   ];
 
   caprinix = {
+    services = {
+      opensh = enabled;
+    };
     disko = enabled // {
       layout = "simple";
       args = {
