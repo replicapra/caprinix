@@ -20,7 +20,7 @@ with lib.${namespace};
 
   caprinix = {
     services = {
-      opensh = enabled;
+      openssh = enabled;
     };
     disko = enabled // {
       layout = "simple";

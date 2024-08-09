@@ -14,7 +14,7 @@ in
     enable = mkEnableOption "openssh";
   };
 
-  config = mkIfEnbled cfg {
+  config = mkIfEnabled cfg {
     services = {
       openssh = enabled // {
         settings = {
