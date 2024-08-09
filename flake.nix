@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     snowfall-lib = {
       url = "github:snowfallorg/lib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +45,7 @@
       systems.modules.nixos = with inputs; [
         home-manager.nixosModules.home-manager
         disko.nixosModules.disko
+        sops-nix.nixosModules.sops
       ];
 
       outputs-builder = channels: { formatter = channels.nixpkgs.nixfmt-rfc-style; };
