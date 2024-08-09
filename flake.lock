@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "caprinix-secrets": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1723214057,
+        "narHash": "sha256-pFjxmUeUHC69dJCsEXO10AkXyNbknMvkzCXZKsL70RE=",
+        "ref": "refs/heads/master",
+        "rev": "736974015f86ed79c5c8463a945a55039fd4a538",
+        "revCount": 6,
+        "type": "git",
+        "url": "ssh://git@github.com/replicapra/caprinix-secrets"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/replicapra/caprinix-secrets"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -127,6 +147,7 @@
     },
     "root": {
       "inputs": {
+        "caprinix-secrets": "caprinix-secrets",
         "disko": "disko",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
