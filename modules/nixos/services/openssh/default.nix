@@ -34,6 +34,7 @@ in
           ClientAliveInterval 300
         '';
       };
+      fail2ban = enabled;
     };
   };
 }
