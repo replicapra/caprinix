@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   users.users.replicapra = {
     isNormalUser = true;
-    initialPassword = "capra";
+    hashedPasswordFile = config.sops.secrets."replicapra/password".path;
     extraGroups = [
       "networkmanager"
       "wheel"
